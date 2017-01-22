@@ -4,7 +4,7 @@ myschool is a web application developed using python-flask. It is being develope
 ### Motivation
 During my visit to an orphanage in my hometown I found that there were children who don't get enough exposure even though they were capable of achieving a more.
 
-After that I visited some government schools in my hometown to know the activities performed by their students and to my surprise they were doing lot of co-curricular activities like music competition, paiting competition. Some of the students won state level competitions.   
+After that I visited some government schools in my hometown to know the activities performed by their students and to my surprise they were doing lot of co-curricular activities like music competition, painting competition. Some of the students won state level competitions. 
 
 To put information related to such activities, I decided to develop website for them. So I have started an initiative with the broad aim to help poor government schools in terms of information technology. 
 
