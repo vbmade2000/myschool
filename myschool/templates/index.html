@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>School title</title>
-    <link rel="stylesheet" type="text/css" href="./../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 <header>
@@ -9,21 +9,9 @@
 </header>
 <nav>
     <ul>
-        <li>
-            <a href="#">MenuItem 1</a> 
-        </li>
-        <li>
-            <a href="#">MenuItem 2</a> 
-        </li>
-        <li>
-            <a href="#">MenuItem 3</a> 
-        </li>
-        <li>
-            <a href="#">MenuItem 4</a> 
-        </li>
-        <li>
-            <a href="#">MenuItem 5</a> 
-        </li>
+        {% for menu_item in menus %}
+        <li><a href="#">{{ menu_item }}</a></li>
+        {% endfor %}
     </ul>
 </nav>
 
