@@ -1,25 +1,7 @@
-<html>
-<head>
-<title>School title</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-<header>
- <a href="#">School Name</a>
-</header>
-<nav>
-    <ul>
-        {% for menu_item in menus %}
-        <li><a href="{{ menu_item[1] }}">{{ menu_item[0] }}</a></li>
-        {% endfor %}
-    </ul>
-</nav>
-<div class="content">
-About school will be displayed here
-</div>
+{% extends "base.html" %}
 
-<footer>
-All rights reserved &copy Malhar Vora
-</footer>
-</body>
-</html>
+<br/><br/>
+{% block content %}
+
+<h1>Description about school will come here</h1>
+{% endblock %}
