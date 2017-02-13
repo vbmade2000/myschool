@@ -23,6 +23,9 @@ def about():
     print str(menus)
     return render_template("aboutus.html", menus=menus)
     
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Page not found", 404
 
 if __name__ == "__main__":
     app.run()
