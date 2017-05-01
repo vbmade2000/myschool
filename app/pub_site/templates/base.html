@@ -2,28 +2,145 @@
 <html>
   <head>
     <title>School No 3</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
-  <header>
-     <a href="#">School Name</a>
-  </header>
- 
-   <nav>
-    <ul>
-        {% for menu_item in menus %}
-        <li><a href="{{ menu_item[1] }}">{{ menu_item[0] }}</a></li>
-        {% endfor %}
-    </ul>
-   </nav>
+
+
+ <header class="main-header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <h1 class="logo">
+                  <a href="index.php" class="navbar-brand">
+                    My School
+                  </a>
+                </h1>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div role="navigation" class="clearfix mainmenu" id="mainmenu">
+  <div class="_container">
+    <div class="navbar navbar-default"> 
+      
+      <!-- main navigation -->
+      <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle btn-navbar" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="menu-text">Menu</span></button>
+      <!-- /nav-collapse -->
+      
+      <div class="navbar-collapse collapse" aria-expanded="false"> 
+        <div role="navigation">
+          <div tabindex="0" id="primary-nav">
+            <ul aria-label="primary navigation" class="nav navbar-nav">
+              {% for menu_item in menus %}
+              <li  id="nav-about" ><a data-ua-category="nav" class="ga" href="{{ menu_item[1] }}">{{ menu_item[0] }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+      <!-- /nav-collapse --> 
+    </div>
+    <!-- /navbar --> 
+    
+  </div>
+  <!-- /container --> 
+</div>
 
 
       <!-- content section -->
-      {% block content %}{% endblock %}
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>  
 
-<footer>
-All rights reserved &copy Malhar Vora
-</footer>
+
+<div class="_container">
+    <div class="row" id="footer-content">
+      <div class="col-xs-12 col-sm-1-4 col-md-2">
+        <div class="block">
+          <h3>Schools</h3>
+          <ul class="footer-list">
+            <li><a data-ua-label="footer" class="su-link" href="http://gsb.stanford.edu">Business</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://earth.stanford.edu">Earth, Energy &amp; Environmental Sciences</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://ed.stanford.edu">Education</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://engineering.stanford.edu">Engineering</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://humsci.stanford.edu">Humanities &amp; Sciences</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://www.law.stanford.edu">Law</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://med.stanford.edu">Medicine</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-1-4 col-md-2">
+        <div class="block">
+          <h3>Departments</h3>
+          <ul class="footer-list">
+            <li><a href="/academics/departments">Departments A - Z</a></li>
+            <li><a href="/academics/programs">Interdisciplinary Programs</a></li>
+          </ul>
+          <h3>Research</h3>
+          <ul class="footer-list">
+            <li><a href="/research/centers">Research Centers A - Z</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="https://interdisciplinary.stanford.edu/">Interdisciplinary Research</a></li>
+            <li class="last"><a data-ua-label="footer" class="su-link" href="http://library.stanford.edu">Libraries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-1-4 col-md-2">
+        <div class="block">
+          <h3>Health care</h3>
+          <ul class="footer-list">
+            <li><a data-ua-label="footer" class="su-link" href="http://stanfordhealthcare.org/">Stanford Health Care</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://www.stanfordchildrens.org">Stanford Children's Health</a></li>
+          </ul>
+          <h3>Online Learning</h3>
+          <ul class="footer-list">
+            <li><a data-ua-label="footer" class="su-link" href="http://online.stanford.edu">Stanford Online</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-1-4 col-md-2">
+        <div class="block">
+          <h3>About Stanford</h3>
+          <ul class="footer-list">
+            <li><a data-ua-label="footer" class="su-link" href="http://facts.stanford.edu">Facts</a></li>
+            <li><a href="/about/history">History</a></li>
+       <li><a href="http://wasc.stanford.edu/">Accreditation</a></li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Admission</h3>
+          <ul class="footer-list">
+            <li><a data-ua-label="footer" class="su-link" href="http://admission.stanford.edu">Undergraduate</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://studentaffairs.stanford.edu/gradadmissions">Graduate</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://finaid.stanford.edu">Financial Aid</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-1-4 col-md-2">
+        <div class="block">
+          <h3>Resources</h3>
+          <ul class="footer-list">
+            <li><a href="/atoz/">A - Z Index</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://campus-map.stanford.edu">Campus Map</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://stanfordwho.stanford.edu">Directory</a></li>
+            <li><a data-ua-label="footer" class="su-link" href="http://profiles.stanford.edu">Stanford Profiles</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-2" id="hp-buttons">
+        <ul>
+          <li><a class="btn btn-u btn-block" href="/admission"><i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i> <span>Apply</span> </a> </li>
+          <li><a data-ua-action="visitors-gateway" data-ua-label="footer" class="btn btn-u btn-block su-link" href="http://visit.stanford.edu"><i class="fa fa-plane fa-fw" aria-hidden="true"></i> <span>Visit Campus</span></a> </li>
+          <li><a data-ua-label="footer" class="btn btn-u btn-block su-link" href="http://giving.stanford.edu"><i class="fa fa-gift fa-fw" aria-hidden="true"></i> <span>Make a Gift</span></a> </li>
+          <li><a data-ua-label="footer" class="btn btn-u btn-block su-link" href="http://stanfordcareers.stanford.edu"><i class="fa fa-user fa-fw" aria-hidden="true"></i> <span>Find a Job</span> </a> </li>
+          <li><a class="btn btn-u btn-block" href="/contact"><i class="fa fa-comment-o fa-fw" aria-hidden="true"></i> <span>Contact Us</span></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   </body>
 </html>
