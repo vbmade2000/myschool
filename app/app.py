@@ -5,4 +5,4 @@ myschool_app = Flask(__name__)
 myschool_app.register_blueprint(pub_site)
 
 if __name__ == "__main__":
-    myschool_app.run()
+    myschool_app.run(debug=True)

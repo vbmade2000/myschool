@@ -27,6 +27,7 @@ a:hover {
     margin: 0;
     padding: 16px 0;
 }
+
 .main-header .navbar-default .navbar-nav > li > a {
     background-color: transparent;
     border-bottom: 1px solid #fff;
@@ -45,6 +46,9 @@ a:hover {
 .main-header .navbar-default .navbar-nav > .active > a, .main-header .navbar-default .navbar-nav > .active > a:focus, .main-header .navbar-default .navbar-nav > .active > a:hover {
     background-color: transparent;
     border-bottom-color: #f76139;
+}
+.mainmenu{
+    padding-top: 30px
 }
 .dropdown-menu {
     border: 1px solid #f76139;
